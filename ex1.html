@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
+</head>
+
+<body>
+    <h2>In javascript use underscore to get all orders that are successfully 'placed'.</h2>
+    <p>See the Result in the Console</p>
+    <script>
+        let listData = [
+            { id: 1, status: 'pending' },
+            { id: 2, status: 'placed' },
+            { id: 3, status: 'placed' },
+            { id: 4, status: 'shipped' },
+            { id: 5, status: 'pending' },
+            { id: 6, status: 'placed' },
+            { id: 7, status: 'shipped' },
+            { id: 8, status: 'pending' },
+            { id: 9, status: 'placed' },
+            { id: 10, status: 'shipped' },
+            { id: 11, status: 'pending' },
+            { id: 12, status: 'placed' },
+            { id: 13, status: 'placed' },
+            { id: 14, status: 'shipped' },
+            { id: 15, status: 'pending' },
+            { id: 16, status: 'placed' },
+            { id: 17, status: 'shipped' },
+            { id: 18, status: 'pending' },
+            { id: 19, status: 'placed' },
+            { id: 20, status: 'shipped' }
+        ];
+        let result =_.where(listData, { status: 'placed' })
+        console.log(result)
+    </script>
+</body>
+
+</html>
