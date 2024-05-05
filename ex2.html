@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@latest/underscore-umd-min.js"></script>
+</head>
+
+<body>
+    <h2>In javascript use underscore to get all orders that are in all statuses.In futire, the statuses will get added
+        or removed. So, please donot hard code the status in your code.
+    </h2>
+    <p>See the Result in the Console</p>
+    <script>
+        let data = [
+            { id: 1, status: 'pending' },
+            { id: 2, status: 'placed' },
+            { id: 3, status: 'placed' },
+            { id: 4, status: 'shipped' },
+            { id: 5, status: 'pending' },
+            { id: 6, status: 'placed' },
+            { id: 7, status: 'shipped' },
+            { id: 8, status: 'pending' },
+            { id: 9, status: 'placed' },
+            { id: 10, status: 'shipped' },
+            { id: 11, status: 'pending' },
+            { id: 12, status: 'placed' },
+            { id: 13, status: 'placed' },
+            { id: 14, status: 'shipped' },
+            { id: 15, status: 'pending' },
+            { id: 16, status: 'placed' },
+            { id: 17, status: 'shipped' },
+            { id: 18, status: 'pending' },
+            { id: 19, status: 'placed' },
+            { id: 20, status: 'shipped' },
+            { id: 21, status: 'pending' },
+            { id: 22, status: 'placed' },
+            { id: 23, status: 'placed' },
+            { id: 24, status: 'shipped' },
+            { id: 25, status: 'pending' },
+            { id: 26, status: 'placed' },
+            { id: 27, status: 'shipped' },
+            { id: 28, status: 'pending' },
+            { id: 29, status: 'placed' },
+            { id: 30, status: 'shipped' },
+            { id: 31, status: 'pending' },
+            { id: 32, status: 'placed' },
+            { id: 33, status: 'placed' },
+            { id: 34, status: 'shipped' },
+            { id: 35, status: 'pending' },
+            { id: 36, status: 'placed' },
+            { id: 37, status: 'shipped' },
+            { id: 38, status: 'pending' },
+            { id: 39, status: 'placed' },
+            { id: 40, status: 'shipped' },
+        ];
+
+        let res1 = [];
+        for (let i of data) {
+            let res = res1.push(i['status']);
+        }
+        let notrepeated = [];
+        let notrepeated1 = [];
+        let notrepeated2 = [];
+        for (let i of res1) {
+            if (i == 'pending') {
+                notrepeated.push(i)
+
+            } else if (i == 'shipped') {
+                notrepeated1.push(i)
+
+            }
+            else {
+                notrepeated2.push(i)
+            }
+        }
+        let pendingData = _.first(notrepeated);
+        let shippedData = _.first(notrepeated1);
+        let PlacedData = _.first(notrepeated2);
+        console.log(pendingData);
+        console.log(shippedData);
+        console.log(PlacedData);
+
+    </script>
+</body>
+
+</html>
